@@ -1,4 +1,5 @@
 from woocommerce import API
+import json
 
 wcapi = API(
     url="http://localhost:8080",
@@ -14,8 +15,7 @@ try:
 
     if response.status_code == 200:
       c = response.json()
-      nombre = c.get("first_name", "") + " " + c.get("last_name", "")
-      print(f"ID: {c['id']} | Nombre: {nombre.strip()} | Email: {c.get('email', '')}")
+      print(json.dumps(c, indent=2))
     else:
       print(f"Error {response.status_code}: {response.text}")
 
