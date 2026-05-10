@@ -2,10 +2,10 @@ from Endpoints.dependencies import wcapi
 import xmlrpc.client
 
 url = "http://localhost:8069"
-db = "angeldb"
-username = "15234649@modelo.edu.mx"
-password = "Ang345el$"
-api_key = "fcb6bb8078a76a7b3df4c48cd94793ddf51874c3"
+db = "EMIDB"
+username = "emiliovad1205@gmail.com"
+password = "admin123"
+api_key = "ca0b4b32b560f3096cf1272ce474421d2ee8f713"
 
 common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
 uid = common.authenticate(db, username, api_key, {})
@@ -35,11 +35,16 @@ print(f"\nSe encontraron: {len(clientes_odoo)} clientes en Odoo\n")
 
 for cliente in clientes_odoo:
     try:
+        def a_texto(valor):
+            if valor in (None, False):
+                return ""
+            return str(valor).strip()
+
         nombre = cliente.get('name', '')
-        email = cliente.get('email', '')
-        telefono = cliente.get('phone', '')
-        calle = cliente.get('street', '')
-        ciudad = cliente.get('city', '')
+        email = a_texto(cliente.get('email', ''))
+        telefono = a_texto(cliente.get('phone', ''))
+        calle = a_texto(cliente.get('street', ''))
+        ciudad = a_texto(cliente.get('city', ''))
 
         if not email:
             print(f"Cliente sin email omitido: {nombre}")
