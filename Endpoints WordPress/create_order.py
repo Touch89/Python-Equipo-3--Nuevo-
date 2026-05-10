@@ -1,12 +1,4 @@
-from woocommerce import API
-
-wcapi = API(
-    url="http://localhost:8080",
-    consumer_key="ck_6ca7ce3cfe2e00e29777e448b45518707b22f404",
-    consumer_secret="cs_ac042df24d3e1cb6f12bda36415605c0e26502ea",
-    version="wc/v3",
-    timeout=20
-)
+from ..dependencies import wcapi
 
 try:
     data = {

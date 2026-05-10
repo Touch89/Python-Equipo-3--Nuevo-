@@ -1,13 +1,5 @@
-from woocommerce import API
+from ..dependencies import wcapi
 import json
-
-wcapi = API(
-  url="",
-  consumer_key="",
-  consumer_secret="",
-  version="wc/v3",
-  timeout=20
-)
 
 try:
   coupon_id = input("Coupon ID: ")
