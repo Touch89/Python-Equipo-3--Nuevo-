@@ -1,4 +1,4 @@
-from dependencies import wcapi
+from Endpoints.dependencies import wcapi
 import xmlrpc.client
 
 url = "http://localhost:8069"
