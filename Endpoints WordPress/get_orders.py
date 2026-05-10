@@ -1,4 +1,4 @@
-from ..dependencies import wcapi
+from dependencies import wcapi
 
 try:
     response = wcapi.get("orders", params={"per_page": 10})

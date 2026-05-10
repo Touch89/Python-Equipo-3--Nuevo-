@@ -1,4 +1,4 @@
-from ..dependencies import wcapi
+from dependencies import wcapi
 import json
 
 try:
