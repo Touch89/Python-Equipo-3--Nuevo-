@@ -1,4 +1,4 @@
-from dependencies import wcapi
+from Endpoints.dependencies import wcapi
 import xmlrpc.client
 
 url = "http://localhost:8069"
@@ -6,7 +6,6 @@ db = "angeldb"
 username = "15234649@modelo.edu.mx"
 password = "Ang345el$"
 api_key = "fcb6bb8078a76a7b3df4c48cd94793ddf51874c3"
-
 
 common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
 uid = common.authenticate(db, username, api_key, {})

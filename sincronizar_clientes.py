@@ -1,4 +1,4 @@
-from woocommerce import API
+from Endpoints.dependencies import wcapi
 import xmlrpc.client
 
 url = "http://localhost:8069"
@@ -6,14 +6,6 @@ db = "angeldb"
 username = "15234649@modelo.edu.mx"
 password = "Ang345el$"
 api_key = "fcb6bb8078a76a7b3df4c48cd94793ddf51874c3"
-
-wcapi = API(
-    url="http://localhost:8080",
-    consumer_key="ck_6ca7ce3cfe2e00e29777e448b45518707b22f404",
-    consumer_secret="cs_ac042df24d3e1cb6f12bda36415605c0e26502ea",
-    version="wc/v3",
-    timeout=20
-)
 
 common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
 uid = common.authenticate(db, username, api_key, {})
