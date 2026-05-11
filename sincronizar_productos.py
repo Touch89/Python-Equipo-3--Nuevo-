@@ -3,11 +3,9 @@ import xmlrpc.client
 
 url = "http://localhost:8069"
 db = "angeldb"
-db = "EMIDB"
-username = "emiliovad1205@gmail.com"
-password = "admin123"
-api_key = "ca0b4b32b560f3096cf1272ce474421d2ee8f713"
-
+username = "15234649@modelo.edu.mx"
+password = "Ang345el$"
+api_key = "fcb6bb8078a76a7b3df4c48cd94793ddf51874c3"
 
 common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
 uid = common.authenticate(db, username, api_key, {})
