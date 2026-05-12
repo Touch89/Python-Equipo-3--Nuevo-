@@ -2,11 +2,9 @@ from Endpoints.dependencies import wcapi
 import xmlrpc.client
 
 url = "http://localhost:8069"
-db = "angeldb"
-db = "EMIDB"
-username = "emiliovad1205@gmail.com"
-password = "admin123"
-api_key = "ca0b4b32b560f3096cf1272ce474421d2ee8f713"
+db = "db-examen"
+username = "emicamposdaguer@gmail.com"
+api_key = "4a0da3d342feb4abe6b06821d8b375cc7b6fea74"
 
 
 common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
